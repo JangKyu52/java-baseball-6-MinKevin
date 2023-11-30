@@ -8,7 +8,7 @@ public class Validator {
     Pattern pattern = Pattern.compile(Regex.INPUT_NUMBER_REGEX.regex);
 
 
-    public void checkRestartOrNot(boolean input) {
+    public void ifFalseThrowException(boolean input) {
         if (input)
             throw new IllegalArgumentException();
     }

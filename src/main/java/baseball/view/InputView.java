@@ -23,7 +23,7 @@ public class InputView {
         List<Integer> inputNumbers = new ArrayList<>();
         int convertedInput = Integer.parseInt(input);
         while(convertedInput != 0) {
-            validator.checkRestartOrNot(inputNumbers.contains(convertedInput % 10));
+            validator.ifFalseThrowException(inputNumbers.contains(convertedInput % 10));
             inputNumbers.add(convertedInput % 10);
             convertedInput /= 10;
         }
@@ -32,7 +32,7 @@ public class InputView {
 
     public boolean returnRestartOrNot() {
         String input = Console.readLine();
-        validator.checkRestartOrNot(!input.equals("1") && !input.equals("2"));
+        validator.ifFalseThrowException(!input.equals("1") && !input.equals("2"));
 
         return input.equals("1");
     }

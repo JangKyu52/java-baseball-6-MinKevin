@@ -26,7 +26,7 @@ public class OutputView {
     }
 
     public void printCheckedResultMessage(Map<BallType, Integer> checkedResult) {
-        if (checkedResult.size() == 0)
+        if (checkedResult.isEmpty())
             System.out.println(INFORM_NOTHING.message);
 
         if (checkedResult.size() == 1) {
