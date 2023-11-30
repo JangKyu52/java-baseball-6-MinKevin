@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ValidatorTest {
     @ParameterizedTest
-    @CsvSource(value = {"012", "가나다"}, delimiter = ':')
+    @CsvSource(value = {"012", "가나다", "abc", "a12"}, delimiter = ':')
     void checkInputNumbers(String input) {
         Assertions.assertThatThrownBy(() ->
                 validator.checkInputNumbers(input))
