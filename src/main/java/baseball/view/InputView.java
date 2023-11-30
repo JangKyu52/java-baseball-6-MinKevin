@@ -4,7 +4,6 @@ import camp.nextstep.edu.missionutils.Console;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import static baseball.view.Validator.validator;
 
@@ -37,6 +36,4 @@ public class InputView {
 
         return input.equals("1");
     }
-
-
 }

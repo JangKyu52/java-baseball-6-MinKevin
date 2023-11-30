@@ -1,7 +1,6 @@
 package baseball.view;
 
 import baseball.controller.BallType;
-import camp.nextstep.edu.missionutils.Console;
 
 import java.util.List;
 import java.util.Map;
