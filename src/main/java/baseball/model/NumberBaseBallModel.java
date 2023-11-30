@@ -21,5 +21,30 @@ public class NumberBaseBallModel {
         }
     }
 
+    public Map<BallType, Integer> checkInputNumber(List<Integer> inputNumbers) {
+        Map<BallType, Integer> results = new HashMap<>();
+        for (Integer inputNumber : inputNumbers) {
+            if (answerNumber.contains(inputNumber)) {
+                addResultToMap(inputNumbers, inputNumber, results);
+            }
+        }
+        return results;
+    }
 
+    private void addResultToMap(List<Integer> inputNumbers, Integer inputNumber, Map<BallType, Integer> results) {
+        if (answerNumber.indexOf(inputNumber) == inputNumbers.indexOf(inputNumber)) {
+            if (!results.containsKey(BallType.STRIKE)) {
+                results.put(BallType.STRIKE, 1);
+                return;
+            }
+            results.put(BallType.STRIKE, results.get(BallType.STRIKE) + 1);
+            return;
+        }
+
+        if (!results.containsKey(BallType.BALL)) {
+            results.put(BallType.BALL, 1);
+            return;
+        }
+        results.put(BallType.BALL, results.get(BallType.BALL) + 1);
+    }
 }
